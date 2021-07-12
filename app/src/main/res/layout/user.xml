@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Single List Item Design -->
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingBottom="@dimen/border_height"
+    android:background="@color/card_border">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout
+            android:id="@+id/user"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/input_size"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    app:tint="@color/teal_700"
+                    android:id="@+id/avatar"
+                    android:layout_width="50dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_person"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name"
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/detail_main"/>
+
+                <TextView
+                    android:layout_below="@id/name"
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/input_size"
+                    android:text="@string/email"
+                    android:textColor="@color/muted"
+                    android:layout_marginLeft="@dimen/border_height"/>
+                <ImageView
+                    app:tint="@color/teal_700"
+                    android:id="@+id/arrow"
+                    android:layout_width="15dp"
+                    android:src="@drawable/ic_arrow_forward"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
